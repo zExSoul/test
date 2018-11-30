@@ -1,0 +1,26 @@
+rpc.dubbo:
+  module: core
+  registryAddress: ${ZOOKEEPER_HOST:11.234.229.22}:${ZOOKEEPER_PORT:2181} #11.234.229.22
+  port: 20880
+  check: false
+rpc.mode: true
+
+server:
+  context-path: /
+  port: 8081
+
+spring:
+  datasource:
+    url : jdbc:mysql://localhost:3306/Test
+    username : root
+    password : xyfcc123
+    driverClassName : com.mysql.jdbc.Driver
+  jpa:
+    database : MYSQL
+    show-sql : true
+    hibernate:
+      ddl-auto : update
+      naming-strategy : org.hibernate.cfg.ImprovedNamingStrategy
+    properties:
+      hibernate:
+        dialect : org.hibernate.dialect.MySQL5Dialect

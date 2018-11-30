@@ -1,0 +1,10 @@
+rpc.dubbo:
+  module: web
+  registryAddress: ${ZOOKEEPER_HOST:11.234.229.22}:${ZOOKEEPER_PORT:2181} #11.234.229.22
+  port: 20880
+  check: false
+rpc.mode: true
+
+server:
+  context-path: /
+  port: 8082

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.ddd</groupId>
+    <artifactId>demo</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <modules>
+        <module>api</module>
+        <module>core</module>
+        <module>web</module>
+        <module>infrastructure</module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <!--spring-->
+        <springboot.version>1.5.9.RELEASE</springboot.version>
+
+        <!--dubbo-->
+        <rpc.version>1.0.8.RELEASE</rpc.version>
+
+        <!--terminus-->
+        <zk.version>2.2.RELEASE</zk.version>
+        <terminus-boot.version>1.0.0</terminus-boot.version>
+        <parana.version>4.8.30.RELEASE</parana.version>
+        <terminus-common.version>2.0.3.RELEASE</terminus-common.version>
+        <terminus.cp.common.version>1.0-SNAPSHOT</terminus.cp.common.version>
+        <terminus-boot-session.version>1.6.1.RELEASE</terminus-boot-session.version>
+        <terminus-boot-mybatis.version>1.5.1.RELEASE</terminus-boot-mybatis.version>
+        <spring-boot.version>1.5.9.RELEASE</spring-boot.version>
+        <terminus-mq.version>1.1.1.RELEASE</terminus-mq.version>
+        <terminus-session.version>1.7.2.RELEASE</terminus-session.version>
+        <contract.version>1.0-SNAPSHOT</contract.version>
+        <!--swagger-->
+        <springfox-swagger.version>2.8.0</springfox-swagger.version>
+        <terminus-swagger-starter.version>1.0-SNAPSHOT</terminus-swagger-starter.version>
+        <feign.version>1.4.2.RELEASE</feign.version>
+        <ddd-example.version>0.0.1-SNAPSHOT</ddd-example.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+
+            <dependency>
+                <groupId>com.ddd</groupId>
+                <artifactId>infrastructure</artifactId>
+                <version>${ddd-example.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.ddd</groupId>
+                <artifactId>api</artifactId>
+                <version>${ddd-example.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.ddd</groupId>
+                <artifactId>core</artifactId>
+                <version>${ddd-example.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.ddd</groupId>
+                <artifactId>web</artifactId>
+                <version>${ddd-example.version}</version>
+            </dependency>
+
+
+            <!--spring-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${springboot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-feign</artifactId>
+                <version>${feign.version}</version>
+            </dependency>
+
+
+            <!--dubbo-->
+            <dependency>
+                <groupId>io.terminus.boot.rpc</groupId>
+                <artifactId>rpc-dubbo</artifactId>
+                <version>${rpc.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.terminus.boot.rpc</groupId>
+                <artifactId>rpc-common</artifactId>
+                <version>${rpc.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.terminus.zookeeper</groupId>
+                <artifactId>leader</artifactId>
+                <version>${zk.version}</version>
+            </dependency>
+
+            <!--terminus-->
+            <dependency>
+                <groupId>io.terminus</groupId>
+                <artifactId>terminus-boot-bootstrap</artifactId>
+                <version>${terminus-boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.terminus.parana</groupId>
+                <artifactId>parana-common</artifactId>
+                <version>${parana.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.terminus.cp</groupId>
+                <artifactId>common</artifactId>
+                <version>${terminus.cp.common.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.terminus</groupId>
+                <artifactId>terminus-common</artifactId>
+                <version>${terminus-common.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.terminus.boot</groupId>
+                <artifactId>terminus-spring-boot-starter-session</artifactId>
+                <version>${terminus-boot-session.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>io.terminus.session</groupId>
+                        <artifactId>terminus-session</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>io.terminus.session</groupId>
+                <artifactId>terminus-session</artifactId>
+                <version>${terminus-session.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.terminus.boot</groupId>
+                <artifactId>spring-boot-starter-mybatis</artifactId>
+                <version>${terminus-boot-mybatis.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.terminus.common</groupId>
+                <artifactId>terminus-spring-boot-starter-rocketmq</artifactId>
+                <version>${terminus-mq.version}</version>
+            </dependency>
+            <!--swagger-->
+            <dependency>
+                <groupId>io.terminus.common</groupId>
+                <artifactId>terminus-spring-boot-swagger-starter</artifactId>
+                <version>${terminus-swagger-starter.version}</version>
+            </dependency>
+            <!--  -->
+            <dependency>
+                <groupId>io.terminus.boot.rpc</groupId>
+                <artifactId>rpc-developer</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+
+        </dependencies>
+
+    </dependencyManagement>
+
+    <distributionManagement>
+        <repository>
+            <id>terminus</id>
+            <name>terminus release repository</name>
+            <url>http://repo.terminus.io/content/repositories/releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>terminus</id>
+            <name>terminus snapshot repository</name>
+            <url>http://repo.terminus.io/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.5.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.19.1</version>
+                <configuration>
+                    <useSystemClassLoader>false</useSystemClassLoader>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.0.1</version>
+                <configuration>
+                    <skipSource>false</skipSource>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+
+</project>
