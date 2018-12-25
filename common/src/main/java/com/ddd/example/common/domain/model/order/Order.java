@@ -3,9 +3,6 @@ package com.ddd.example.common.domain.model.order;
 import com.ddd.example.common.domain.model.OrderId;
 import com.ddd.example.common.domain.model.TenantId;
 import com.ddd.example.common.domain.model.entity.Entity;
-import com.ddd.example.common.domain.model.order.address.DeliveryAddress;
-
-import java.util.Date;
 
 /**
  * 订单实体

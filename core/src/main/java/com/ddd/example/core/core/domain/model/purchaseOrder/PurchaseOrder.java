@@ -3,9 +3,10 @@ package com.ddd.example.core.core.domain.model.purchaseOrder;
 import com.ddd.example.common.domain.model.order.Order;
 import com.ddd.example.common.domain.model.order.OrderState;
 import com.ddd.example.common.domain.model.order.PurchaseContract;
-import com.ddd.example.common.domain.model.order.address.DeliveryAddress;
+import com.ddd.example.core.core.domain.model.purchaseOrder.address.DeliveryAddress;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * @author : xuyifan
@@ -16,9 +17,10 @@ public class PurchaseOrder extends Order {
 
     private PurchaseContract purchaseContract;
     private DeliveryAddress deliveryAddress;
-    private PurchaseOrderExtra extra;
+    private List<ChargeItem> chargeItems;
     private Date expectTradeDate;
     private String remark;
+    private PurchaseOrderExtra extra;
 
     private OrderState orderState;
 

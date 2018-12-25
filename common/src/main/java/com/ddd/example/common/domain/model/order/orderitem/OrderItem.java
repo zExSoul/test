@@ -1,4 +1,4 @@
-package com.ddd.example.common.domain.model.order;
+package com.ddd.example.common.domain.model.order.orderitem;
 
 import com.ddd.example.common.domain.model.OrderId;
 import com.ddd.example.common.domain.model.OrderItemId;

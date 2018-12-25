@@ -1,6 +1,6 @@
-package com.ddd.example.core.core.domain.model.purchaseOrder;
+package com.ddd.example.core.core.domain.model.purchaseOrder.orderitem;
 
-import com.ddd.example.common.domain.model.order.OrderItem;
+import com.ddd.example.common.domain.model.order.orderitem.OrderItem;
 
 /**
  * @author : xuyifan

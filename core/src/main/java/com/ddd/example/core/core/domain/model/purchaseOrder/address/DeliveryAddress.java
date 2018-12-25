@@ -1,5 +1,7 @@
-package com.ddd.example.common.domain.model.order.address;
+package com.ddd.example.core.core.domain.model.purchaseOrder.address;
 
+import com.ddd.example.common.domain.model.order.address.Address;
+import com.ddd.example.common.domain.model.order.address.AddressType;
 import com.ddd.example.common.domain.model.vo.ValueObject;
 
 /**
