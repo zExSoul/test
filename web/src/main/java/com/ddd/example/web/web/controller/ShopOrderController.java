@@ -3,7 +3,7 @@ package com.ddd.example.web.web.controller;
 import com.ddd.example.api.api.dto.ShopOrderDTO;
 import com.ddd.example.api.api.facade.ShopOrderFacade;
 import com.ddd.example.api.api.request.NewShopOrderRequest;
-import com.ddd.example.infrastructure.util.Validate;
+import com.ddd.example.common.validate.Validate;
 import io.terminus.boot.rpc.common.annotation.RpcConsumer;
 import io.terminus.common.model.Response;
 import org.springframework.web.bind.annotation.GetMapping;

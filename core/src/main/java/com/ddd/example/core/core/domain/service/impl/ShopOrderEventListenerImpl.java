@@ -27,8 +27,8 @@ public class ShopOrderEventListenerImpl implements ShopOrderEventListener {
     public void on(OrderCreateEvent orderCreateEvent) {
         OrderPO orderPO = OrderPO.builder()
                 .orderId(orderCreateEvent.getOrderId())
-                .supplierId(orderCreateEvent.getSupplierId())
-                .buyerId(orderCreateEvent.getBuyerId())
+                .supplierId(orderCreateEvent.getSupplier().getId())
+                .buyerId(orderCreateEvent.getPurchase().getId())
                 .amount(orderCreateEvent.getAmount())
                 .isDeleted(0)
                 .build();

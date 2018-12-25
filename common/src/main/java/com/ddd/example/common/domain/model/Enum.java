@@ -1,4 +1,4 @@
-package com.ddd.example.infrastructure.model;
+package com.ddd.example.common.domain.model;
 
 import lombok.Getter;
 

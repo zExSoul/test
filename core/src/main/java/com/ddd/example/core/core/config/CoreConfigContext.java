@@ -1,7 +1,6 @@
 package com.ddd.example.core.core.config;
 
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.cloud.netflix.feign.EnableFeignClients;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
@@ -11,7 +10,6 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 @EnableAutoConfiguration
-@EnableFeignClients
 @ComponentScan(basePackages = {"com.ddd.example.core.core"})
 public class CoreConfigContext {
 

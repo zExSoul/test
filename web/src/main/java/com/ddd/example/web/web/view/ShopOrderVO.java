@@ -1,7 +1,7 @@
 package com.ddd.example.web.web.view;
 
 import com.ddd.example.api.api.dto.ShopSkuOrderDTO;
-import com.ddd.example.infrastructure.model.ValueObject;
+import com.ddd.example.common.domain.model.vo.ValueObject;
 import lombok.Data;
 
 import java.math.BigDecimal;

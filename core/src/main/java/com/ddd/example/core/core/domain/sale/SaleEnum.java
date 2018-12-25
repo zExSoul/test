@@ -1,6 +1,6 @@
 package com.ddd.example.core.core.domain.sale;
 
-import com.ddd.example.infrastructure.model.Enum;
+import com.ddd.example.common.domain.model.Enum;
 
 /**
  * Author xuyifan

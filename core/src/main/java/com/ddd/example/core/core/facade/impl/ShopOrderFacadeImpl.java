@@ -49,7 +49,7 @@ public class ShopOrderFacadeImpl implements ShopOrderFacade {
         try {
             shopOrder.send(command);
         } catch (JsonResponseException e) {
-            throw new JsonResponseException(e.getMessage());
+            throw new ServiceException(e.getMessage());
         }
         return Response.ok();
     }
@@ -73,7 +73,7 @@ public class ShopOrderFacadeImpl implements ShopOrderFacade {
         try {
             shopOrders = shopOrderService.findAll(orderIds);
         } catch (ServiceException e) {
-            throw new JsonResponseException(e.getMessage());
+            throw new ServiceException(e.getMessage());
         }
         List<ShopOrderDTO> shopOrderDTOs =
                 BeanUtil.copyListElementsProperties(shopOrders, ShopOrderDTO.class);
@@ -86,7 +86,7 @@ public class ShopOrderFacadeImpl implements ShopOrderFacade {
         try {
             shopOrders = shopOrderService.findAll();
         } catch (ServiceException e) {
-            throw new JsonResponseException(e.getMessage());
+            throw new ServiceException(e.getMessage());
         }
         List<ShopOrderDTO> shopOrderDTOs =
                 BeanUtil.copyListElementsProperties(shopOrders, ShopOrderDTO.class);
